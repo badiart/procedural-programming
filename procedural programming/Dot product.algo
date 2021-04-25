@@ -1,0 +1,26 @@
+PROCEDURE Dot product(VAR ps)
+VAR
+  v1 : ARRAY_OF INTEGER[2];
+  v2 : ARRAY_OF INTEGER[2];
+  i,j:INTEGER;
+  ps:=0;
+BEGIN
+    FOR i FROM 0 TO v1.length STEP 1 DO
+    FOR j FROM 0 TO v2.length STEP 1 DO
+        ps:=ps+v1[i]*v2[j]
+    END_FOR
+    END_FOR
+END
+
+ALGORITHM Dot product
+VAR
+    ps:INTEGER
+    res:INTEGER
+BEGIN
+   res:= Dot product(VAR ps)
+  IF (res==0) THEN
+      write("les deux vecteurs sont orthogonaux")
+  ELSE
+      write("non,donner deux autres vecteurs")
+  END_IF
+END
